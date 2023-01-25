@@ -17,4 +17,10 @@ userRoutes.get(
   }
 );
 
+userRoutes.post("/user", (req: Request, res: Response) => {
+  const newUser = req.body;
+
+  res.status(201).send({ newUser });
+});
+
 export default userRoutes;
