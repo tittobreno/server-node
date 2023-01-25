@@ -30,4 +30,10 @@ userRoutes.put("/user/:uuid", (req: Request, res: Response) => {
   return res.status(200).send(modifierUser);
 });
 
+userRoutes.delete("/user/:uuid", (req: Request, res: Response) => {
+  const uuid = req.params.uuid;
+
+  res.sendStatus(200);
+});
+
 export default userRoutes;
