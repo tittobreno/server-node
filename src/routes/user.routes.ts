@@ -9,11 +9,11 @@ userRoutes.get("/", (req: Request, res: Response) => {
 });
 
 userRoutes.get(
-  "user/:uuid",
+  "/user/:uuid",
   (req: Request<{ uuid: string }>, res: Response) => {
     const uuid = req.params.uuid;
 
-    res.status(200).send(uuid);
+    res.status(200).send({ uuid });
   }
 );
 
