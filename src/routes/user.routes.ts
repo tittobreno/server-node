@@ -23,4 +23,11 @@ userRoutes.post("/user", (req: Request, res: Response) => {
   res.status(201).send({ newUser });
 });
 
+userRoutes.put("/user/:uuid", (req: Request, res: Response) => {
+  const uuid = req.params.uuid;
+  const modifierUser = req.body;
+
+  return res.status(200).send(modifierUser);
+});
+
 export default userRoutes;
